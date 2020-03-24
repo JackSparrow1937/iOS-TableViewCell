@@ -8,6 +8,9 @@
 
 #import "JListView.h"
 
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define LineLabelColor RGBCOLOR(214, 221, 226)
+
 @interface JListView()
 @property (nonatomic, strong)UIScrollView *scrollView;
 @property (nonatomic, strong)NSMutableArray *nums;//cell数
@@ -61,9 +64,18 @@
         }
     }
     
+    CGFloat YShat;
+    if(self.JListViewheadView != nil){
+        self.contentSizeHeight = self.contentSizeHeight + CGRectGetMaxY(self.JListViewheadView.frame);
+        [self.scrollView addSubview:self.JListViewheadView];
+        YShat = CGRectGetMaxY(self.JListViewheadView.frame);
+    }else{
+        YShat = 0;
+    }
+    
     //设置scrollerView的contentSize
     self.scrollView.contentSize = CGSizeMake(0, self.contentSizeHeight);
-    CGFloat YShat = 0;
+    
     
     //布局UI
     for (int i = 0; i < self.nums.count; i++) {//布局headView
@@ -134,7 +146,7 @@
             if(self.separatorStyle && j != rowCount - 1){
                 UILabel *lineLabel = [[UILabel alloc]init];
                 lineLabel.frame = CGRectMake(0, CGRectGetHeight(cellView.frame) - 0.5, cellView.frame.size.width, 0.5);
-                lineLabel.backgroundColor = [UIColor lightGrayColor];
+                lineLabel.backgroundColor = LineLabelColor;
                 [cellView addSubview:lineLabel];
                 [cellView bringSubviewToFront:lineLabel];
             }

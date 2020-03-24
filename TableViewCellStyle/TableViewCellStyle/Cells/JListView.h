@@ -71,6 +71,10 @@
  */
 @property (nonatomic, assign)BOOL separatorStyle;
 /**
+ * JListView的头部view
+ */
+@property (nonatomic, strong)UIView *JListViewheadView;
+/**
  * 重新加载UI数据
  */
 - (void)reloadData;

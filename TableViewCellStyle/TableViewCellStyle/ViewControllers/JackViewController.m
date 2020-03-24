@@ -53,6 +53,23 @@
 
 #pragma mark --
 - (void)foundUI{
+    
+    UIView *headView = [[UIView alloc]init];
+    headView.backgroundColor = [UIColor whiteColor];
+    headView.frame = CGRectMake(0, 0, self.view.frame.size.width, 100);
+    
+    UILabel *title  = [[UILabel alloc]init];
+    title.text = @"分区添加阴影";
+    title.font = [UIFont boldSystemFontOfSize:22];
+    title.textColor = RGBCOLOR(76, 84, 102);
+    
+    [headView addSubview:title];
+    [title mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(headView.mas_left).offset(20);
+        make.top.equalTo(headView.mas_top).offset(20);
+    }];
+    
+    self.jList.JListViewheadView = headView;
     [self.view addSubview:self.jList];
     [self.jList mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.right.bottom.left.equalTo(self.view);
