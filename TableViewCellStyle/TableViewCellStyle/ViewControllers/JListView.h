@@ -47,6 +47,11 @@
  */
 - (void)JListViewLoadError:(NSString *)errorStr;
 
+/**
+ * 点击事件
+ */
+- (void)JListViewDelected:(UIView *)cell indexPath:(NSIndexPath *)indexPath;
+
 @required  //必须实现方法
 /**
  * 返回分区,cell个数

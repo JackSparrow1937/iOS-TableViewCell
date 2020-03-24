@@ -7,6 +7,7 @@
 //
 
 #import "JListView.h"
+#import "JListTap.h"
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define LineLabelColor RGBCOLOR(214, 221, 226)
@@ -142,7 +143,7 @@
             //记录阴影位置
             shadowStartPoint = CGPointMake(cellView.frame.origin.x, shadowStartPoint.y);
             shadowEndPoint = CGPointMake(CGRectGetMaxX(cellView.frame), YShat);
-
+            
             if(self.separatorStyle && j != rowCount - 1){
                 UILabel *lineLabel = [[UILabel alloc]init];
                 lineLabel.frame = CGRectMake(0, CGRectGetHeight(cellView.frame) - 0.5, cellView.frame.size.width, 0.5);
@@ -150,10 +151,24 @@
                 [cellView addSubview:lineLabel];
                 [cellView bringSubviewToFront:lineLabel];
             }
+            
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:j inSection:section];
+            //添加点击事件
+            JListTap *tap = [[JListTap alloc]init];
+            tap.indexPath = indexPath;
+            tap.targetView = cellView;
+            [tap addTarget:self action:@selector(cellSelected:)];
+            [cellView addGestureRecognizer:tap];
         }
         
         //添加分区的阴影
         [self addSectionShaowStartPoint:shadowStartPoint endPoint:shadowEndPoint section:section];
+    }
+}
+
+- (void)cellSelected:(JListTap *)sender{
+    if([self.delegate respondsToSelector:@selector(JListViewDelected:indexPath:)]){
+        [self.delegate JListViewDelected:sender.targetView indexPath:sender.indexPath];
     }
 }
 

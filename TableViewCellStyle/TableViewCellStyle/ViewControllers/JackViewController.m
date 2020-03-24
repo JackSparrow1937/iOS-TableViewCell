@@ -166,6 +166,10 @@
     return cellView;
 }
 
+- (void)JListViewDelected:(UIView *)cell indexPath:(NSIndexPath *)indexPath{
+    NSLog(@"点击cell:%@  section:%ld   row:%ld",NSStringFromClass([cell class]),indexPath.section,indexPath.row);
+}
+
 - (void)JListViewLoadError:(NSString *)errorStr{
     NSLog(@"%@",errorStr);
 }

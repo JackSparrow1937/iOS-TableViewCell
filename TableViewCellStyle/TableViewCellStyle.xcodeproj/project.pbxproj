@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0446E883242465C80034B833 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0446E882242465C80034B833 /* 2.json */; };
 		045D82122429FD53009950B6 /* JListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045D82112429FD53009950B6 /* JListView.m */; };
+		045D821B242A0936009950B6 /* JListTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 045D821A242A0936009950B6 /* JListTap.m */; };
 		04CB10B7241F011C00D02442 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10B6241F011C00D02442 /* AppDelegate.m */; };
 		04CB10BA241F011C00D02442 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10B9241F011C00D02442 /* SceneDelegate.m */; };
 		04CB10C0241F011C00D02442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CB10BE241F011C00D02442 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		0446E882242465C80034B833 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2.json; sourceTree = "<group>"; };
 		045D82102429FD53009950B6 /* JListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JListView.h; sourceTree = "<group>"; };
 		045D82112429FD53009950B6 /* JListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JListView.m; sourceTree = "<group>"; };
+		045D8219242A0936009950B6 /* JListTap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JListTap.h; sourceTree = "<group>"; };
+		045D821A242A0936009950B6 /* JListTap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JListTap.m; sourceTree = "<group>"; };
 		04705AC224205D3300286610 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		04CB10B2241F011C00D02442 /* 分区添加阴影.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "分区添加阴影.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CB10B5241F011C00D02442 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				04CB10F0241F028900D02442 /* JackViewController.m */,
 				045D82102429FD53009950B6 /* JListView.h */,
 				045D82112429FD53009950B6 /* JListView.m */,
+				045D8219242A0936009950B6 /* JListTap.h */,
+				045D821A242A0936009950B6 /* JListTap.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				04CB10C8241F011D00D02442 /* main.m in Sources */,
 				045D82122429FD53009950B6 /* JListView.m in Sources */,
 				04CB10BA241F011C00D02442 /* SceneDelegate.m in Sources */,
+				045D821B242A0936009950B6 /* JListTap.m in Sources */,
 				04CB10F1241F028900D02442 /* JackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
