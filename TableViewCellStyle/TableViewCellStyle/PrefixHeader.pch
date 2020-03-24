@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  TableViewCellStyle
+//
+//  Created by Jack-Sparrow on 2020/3/17.
+//  Copyright © 2020 Jack-Sparrow. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+// 如果这个全局的头文件或者宏只需要在.m或者.mm文件中使用,
+// 请把该头文件或宏写到#ifdef __OBJC__ 中
+#import "Masonry.h"
+
+#endif
+
+#endif /* PrefixHeader_pch */

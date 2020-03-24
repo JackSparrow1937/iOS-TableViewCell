@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0446E883242465C80034B833 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0446E882242465C80034B833 /* 2.json */; };
+		04CB10B7241F011C00D02442 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10B6241F011C00D02442 /* AppDelegate.m */; };
+		04CB10BA241F011C00D02442 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10B9241F011C00D02442 /* SceneDelegate.m */; };
+		04CB10C0241F011C00D02442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CB10BE241F011C00D02442 /* Main.storyboard */; };
+		04CB10C2241F011D00D02442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CB10C1241F011D00D02442 /* Assets.xcassets */; };
+		04CB10C5241F011D00D02442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CB10C3241F011D00D02442 /* LaunchScreen.storyboard */; };
+		04CB10C8241F011D00D02442 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10C7241F011D00D02442 /* main.m */; };
+		04CB10D2241F011D00D02442 /* TableViewCellStyleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10D1241F011D00D02442 /* TableViewCellStyleTests.m */; };
+		04CB10DD241F011D00D02442 /* TableViewCellStyleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10DC241F011D00D02442 /* TableViewCellStyleUITests.m */; };
+		04CB10EB241F014400D02442 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04CB10EA241F014400D02442 /* README.md */; };
+		04CB10F1241F028900D02442 /* JackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB10F0241F028900D02442 /* JackViewController.m */; };
+		04F4121024289A66004902D3 /* JListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F4120F24289A66004902D3 /* JListView.m */; };
+		439BB5576027BDC88C789D78 /* Pods_TableViewCellStyleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128229AF72669EE2C53953C3 /* Pods_TableViewCellStyleTests.framework */; };
+		49864D8612AC77F2013590C4 /* Pods_TableViewCellStyle_TableViewCellStyleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AA50220CCF1E7AC29367A0 /* Pods_TableViewCellStyle_TableViewCellStyleUITests.framework */; };
+		73E062B1509E37724C23F587 /* Pods_TableViewCellStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBC645BD9EE1A0564A73108 /* Pods_TableViewCellStyle.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04CB10CE241F011D00D02442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CB10AA241F011C00D02442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CB10B1241F011C00D02442;
+			remoteInfo = TableViewCellStyle;
+		};
+		04CB10D9241F011D00D02442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04CB10AA241F011C00D02442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CB10B1241F011C00D02442;
+			remoteInfo = TableViewCellStyle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0446E882242465C80034B833 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2.json; sourceTree = "<group>"; };
+		04705AC224205D3300286610 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04CB10B2241F011C00D02442 /* 分区添加阴影.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "分区添加阴影.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CB10B5241F011C00D02442 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04CB10B6241F011C00D02442 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04CB10B8241F011C00D02442 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		04CB10B9241F011C00D02442 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		04CB10BF241F011C00D02442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04CB10C1241F011D00D02442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04CB10C4241F011D00D02442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04CB10C6241F011D00D02442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CB10C7241F011D00D02442 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04CB10CD241F011D00D02442 /* TableViewCellStyleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewCellStyleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CB10D1241F011D00D02442 /* TableViewCellStyleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellStyleTests.m; sourceTree = "<group>"; };
+		04CB10D3241F011D00D02442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CB10D8241F011D00D02442 /* TableViewCellStyleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewCellStyleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CB10DC241F011D00D02442 /* TableViewCellStyleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCellStyleUITests.m; sourceTree = "<group>"; };
+		04CB10DE241F011D00D02442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CB10EA241F014400D02442 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		04CB10EF241F028900D02442 /* JackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JackViewController.h; sourceTree = "<group>"; };
+		04CB10F0241F028900D02442 /* JackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JackViewController.m; sourceTree = "<group>"; };
+		04F4120E24289A66004902D3 /* JListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JListView.h; sourceTree = "<group>"; };
+		04F4120F24289A66004902D3 /* JListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JListView.m; sourceTree = "<group>"; };
+		128229AF72669EE2C53953C3 /* Pods_TableViewCellStyleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewCellStyleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36AA50220CCF1E7AC29367A0 /* Pods_TableViewCellStyle_TableViewCellStyleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewCellStyle_TableViewCellStyleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DBC645BD9EE1A0564A73108 /* Pods_TableViewCellStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewCellStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADED8DE3E085309EDFB5E746 /* Pods-TableViewCellStyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewCellStyle.debug.xcconfig"; path = "Target Support Files/Pods-TableViewCellStyle/Pods-TableViewCellStyle.debug.xcconfig"; sourceTree = "<group>"; };
+		B1AC7946442F51C36610EE8E /* Pods-TableViewCellStyleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewCellStyleTests.release.xcconfig"; path = "Target Support Files/Pods-TableViewCellStyleTests/Pods-TableViewCellStyleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C47945888A5F1A1101382255 /* Pods-TableViewCellStyle-TableViewCellStyleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewCellStyle-TableViewCellStyleUITests.debug.xcconfig"; path = "Target Support Files/Pods-TableViewCellStyle-TableViewCellStyleUITests/Pods-TableViewCellStyle-TableViewCellStyleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E22C5089E48ED9577CF57EEA /* Pods-TableViewCellStyle-TableViewCellStyleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewCellStyle-TableViewCellStyleUITests.release.xcconfig"; path = "Target Support Files/Pods-TableViewCellStyle-TableViewCellStyleUITests/Pods-TableViewCellStyle-TableViewCellStyleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA4F8D66B1D3E4E824EAF572 /* Pods-TableViewCellStyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewCellStyle.release.xcconfig"; path = "Target Support Files/Pods-TableViewCellStyle/Pods-TableViewCellStyle.release.xcconfig"; sourceTree = "<group>"; };
+		FB718F98D9ABD30C1EFA4DD1 /* Pods-TableViewCellStyleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewCellStyleTests.debug.xcconfig"; path = "Target Support Files/Pods-TableViewCellStyleTests/Pods-TableViewCellStyleTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04CB10AF241F011C00D02442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E062B1509E37724C23F587 /* Pods_TableViewCellStyle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CB10CA241F011D00D02442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				439BB5576027BDC88C789D78 /* Pods_TableViewCellStyleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CB10D5241F011D00D02442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49864D8612AC77F2013590C4 /* Pods_TableViewCellStyle_TableViewCellStyleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04CB10A9241F011C00D02442 = {
+			isa = PBXGroup;
+			children = (
+				04CB10EA241F014400D02442 /* README.md */,
+				04CB10B4241F011C00D02442 /* TableViewCellStyle */,
+				04CB10D0241F011D00D02442 /* TableViewCellStyleTests */,
+				04CB10DB241F011D00D02442 /* TableViewCellStyleUITests */,
+				04CB10B3241F011C00D02442 /* Products */,
+				47299EBE808465F5C7F70746 /* Pods */,
+				8047C3414B2473886958EB6C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04CB10B3241F011C00D02442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04CB10B2241F011C00D02442 /* 分区添加阴影.app */,
+				04CB10CD241F011D00D02442 /* TableViewCellStyleTests.xctest */,
+				04CB10D8241F011D00D02442 /* TableViewCellStyleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04CB10B4241F011C00D02442 /* TableViewCellStyle */ = {
+			isa = PBXGroup;
+			children = (
+				04CB10ED241F01CC00D02442 /* ViewControllers */,
+				04CB10EE241F01DE00D02442 /* Cells */,
+				04CB10B5241F011C00D02442 /* AppDelegate.h */,
+				04CB10B6241F011C00D02442 /* AppDelegate.m */,
+				04CB10B8241F011C00D02442 /* SceneDelegate.h */,
+				04CB10B9241F011C00D02442 /* SceneDelegate.m */,
+				0446E882242465C80034B833 /* 2.json */,
+				04705AC224205D3300286610 /* PrefixHeader.pch */,
+				04CB10BE241F011C00D02442 /* Main.storyboard */,
+				04CB10C1241F011D00D02442 /* Assets.xcassets */,
+				04CB10C3241F011D00D02442 /* LaunchScreen.storyboard */,
+				04CB10C6241F011D00D02442 /* Info.plist */,
+				04CB10C7241F011D00D02442 /* main.m */,
+			);
+			path = TableViewCellStyle;
+			sourceTree = "<group>";
+		};
+		04CB10D0241F011D00D02442 /* TableViewCellStyleTests */ = {
+			isa = PBXGroup;
+			children = (
+				04CB10D1241F011D00D02442 /* TableViewCellStyleTests.m */,
+				04CB10D3241F011D00D02442 /* Info.plist */,
+			);
+			path = TableViewCellStyleTests;
+			sourceTree = "<group>";
+		};
+		04CB10DB241F011D00D02442 /* TableViewCellStyleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04CB10DC241F011D00D02442 /* TableViewCellStyleUITests.m */,
+				04CB10DE241F011D00D02442 /* Info.plist */,
+			);
+			path = TableViewCellStyleUITests;
+			sourceTree = "<group>";
+		};
+		04CB10ED241F01CC00D02442 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04CB10EF241F028900D02442 /* JackViewController.h */,
+				04CB10F0241F028900D02442 /* JackViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04CB10EE241F01DE00D02442 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04F4120E24289A66004902D3 /* JListView.h */,
+				04F4120F24289A66004902D3 /* JListView.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		47299EBE808465F5C7F70746 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADED8DE3E085309EDFB5E746 /* Pods-TableViewCellStyle.debug.xcconfig */,
+				FA4F8D66B1D3E4E824EAF572 /* Pods-TableViewCellStyle.release.xcconfig */,
+				C47945888A5F1A1101382255 /* Pods-TableViewCellStyle-TableViewCellStyleUITests.debug.xcconfig */,
+				E22C5089E48ED9577CF57EEA /* Pods-TableViewCellStyle-TableViewCellStyleUITests.release.xcconfig */,
+				FB718F98D9ABD30C1EFA4DD1 /* Pods-TableViewCellStyleTests.debug.xcconfig */,
+				B1AC7946442F51C36610EE8E /* Pods-TableViewCellStyleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8047C3414B2473886958EB6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DBC645BD9EE1A0564A73108 /* Pods_TableViewCellStyle.framework */,
+				36AA50220CCF1E7AC29367A0 /* Pods_TableViewCellStyle_TableViewCellStyleUITests.framework */,
+				128229AF72669EE2C53953C3 /* Pods_TableViewCellStyleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04CB10B1241F011C00D02442 /* TableViewCellStyle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CB10E1241F011D00D02442 /* Build configuration list for PBXNativeTarget "TableViewCellStyle" */;
+			buildPhases = (
+				F43E81C8D520D51108A0F051 /* [CP] Check Pods Manifest.lock */,
+				04CB10AE241F011C00D02442 /* Sources */,
+				04CB10AF241F011C00D02442 /* Frameworks */,
+				04CB10B0241F011C00D02442 /* Resources */,
+				91273F8807376B07458FBDBB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViewCellStyle;
+			productName = TableViewCellStyle;
+			productReference = 04CB10B2241F011C00D02442 /* 分区添加阴影.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04CB10CC241F011D00D02442 /* TableViewCellStyleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CB10E4241F011D00D02442 /* Build configuration list for PBXNativeTarget "TableViewCellStyleTests" */;
+			buildPhases = (
+				6F0D46E36734D43EE462CC3A /* [CP] Check Pods Manifest.lock */,
+				04CB10C9241F011D00D02442 /* Sources */,
+				04CB10CA241F011D00D02442 /* Frameworks */,
+				04CB10CB241F011D00D02442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CB10CF241F011D00D02442 /* PBXTargetDependency */,
+			);
+			name = TableViewCellStyleTests;
+			productName = TableViewCellStyleTests;
+			productReference = 04CB10CD241F011D00D02442 /* TableViewCellStyleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04CB10D7241F011D00D02442 /* TableViewCellStyleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CB10E7241F011D00D02442 /* Build configuration list for PBXNativeTarget "TableViewCellStyleUITests" */;
+			buildPhases = (
+				5C7BC54F215B140F7E763D26 /* [CP] Check Pods Manifest.lock */,
+				04CB10D4241F011D00D02442 /* Sources */,
+				04CB10D5241F011D00D02442 /* Frameworks */,
+				04CB10D6241F011D00D02442 /* Resources */,
+				B55FAFAB46299E38677970B6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CB10DA241F011D00D02442 /* PBXTargetDependency */,
+			);
+			name = TableViewCellStyleUITests;
+			productName = TableViewCellStyleUITests;
+			productReference = 04CB10D8241F011D00D02442 /* TableViewCellStyleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04CB10AA241F011C00D02442 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Jack-Sparrow";
+				TargetAttributes = {
+					04CB10B1241F011C00D02442 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					04CB10CC241F011D00D02442 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 04CB10B1241F011C00D02442;
+					};
+					04CB10D7241F011D00D02442 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 04CB10B1241F011C00D02442;
+					};
+				};
+			};
+			buildConfigurationList = 04CB10AD241F011C00D02442 /* Build configuration list for PBXProject "TableViewCellStyle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04CB10A9241F011C00D02442;
+			productRefGroup = 04CB10B3241F011C00D02442 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04CB10B1241F011C00D02442 /* TableViewCellStyle */,
+				04CB10CC241F011D00D02442 /* TableViewCellStyleTests */,
+				04CB10D7241F011D00D02442 /* TableViewCellStyleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04CB10B0241F011C00D02442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0446E883242465C80034B833 /* 2.json in Resources */,
+				04CB10C5241F011D00D02442 /* LaunchScreen.storyboard in Resources */,
+				04CB10C2241F011D00D02442 /* Assets.xcassets in Resources */,
+				04CB10EB241F014400D02442 /* README.md in Resources */,
+				04CB10C0241F011C00D02442 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CB10CB241F011D00D02442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CB10D6241F011D00D02442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C7BC54F215B140F7E763D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableViewCellStyle-TableViewCellStyleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F0D46E36734D43EE462CC3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableViewCellStyleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91273F8807376B07458FBDBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableViewCellStyle/Pods-TableViewCellStyle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableViewCellStyle/Pods-TableViewCellStyle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TableViewCellStyle/Pods-TableViewCellStyle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B55FAFAB46299E38677970B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableViewCellStyle-TableViewCellStyleUITests/Pods-TableViewCellStyle-TableViewCellStyleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableViewCellStyle-TableViewCellStyleUITests/Pods-TableViewCellStyle-TableViewCellStyleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TableViewCellStyle-TableViewCellStyleUITests/Pods-TableViewCellStyle-TableViewCellStyleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F43E81C8D520D51108A0F051 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableViewCellStyle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04CB10AE241F011C00D02442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CB10B7241F011C00D02442 /* AppDelegate.m in Sources */,
+				04CB10C8241F011D00D02442 /* main.m in Sources */,
+				04CB10BA241F011C00D02442 /* SceneDelegate.m in Sources */,
+				04CB10F1241F028900D02442 /* JackViewController.m in Sources */,
+				04F4121024289A66004902D3 /* JListView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CB10C9241F011D00D02442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CB10D2241F011D00D02442 /* TableViewCellStyleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CB10D4241F011D00D02442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CB10DD241F011D00D02442 /* TableViewCellStyleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CB10CF241F011D00D02442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CB10B1241F011C00D02442 /* TableViewCellStyle */;
+			targetProxy = 04CB10CE241F011D00D02442 /* PBXContainerItemProxy */;
+		};
+		04CB10DA241F011D00D02442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04CB10B1241F011C00D02442 /* TableViewCellStyle */;
+			targetProxy = 04CB10D9241F011D00D02442 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04CB10BE241F011C00D02442 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CB10BF241F011C00D02442 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04CB10C3241F011D00D02442 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CB10C4241F011D00D02442 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04CB10DF241F011D00D02442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04CB10E0241F011D00D02442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04CB10E2241F011D00D02442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADED8DE3E085309EDFB5E746 /* Pods-TableViewCellStyle.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNAVR823XV;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TableViewCellStyle/PrefixHeader.pch";
+				INFOPLIST_FILE = TableViewCellStyle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Sparrow.TableViewCellStyle";
+				PRODUCT_NAME = "分区添加阴影";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04CB10E3241F011D00D02442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4F8D66B1D3E4E824EAF572 /* Pods-TableViewCellStyle.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNAVR823XV;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TableViewCellStyle/PrefixHeader.pch";
+				INFOPLIST_FILE = TableViewCellStyle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Sparrow.TableViewCellStyle";
+				PRODUCT_NAME = "分区添加阴影";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		04CB10E5241F011D00D02442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB718F98D9ABD30C1EFA4DD1 /* Pods-TableViewCellStyleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNAVR823XV;
+				INFOPLIST_FILE = TableViewCellStyleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Sparrow.TableViewCellStyleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewCellStyle.app/TableViewCellStyle";
+			};
+			name = Debug;
+		};
+		04CB10E6241F011D00D02442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1AC7946442F51C36610EE8E /* Pods-TableViewCellStyleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNAVR823XV;
+				INFOPLIST_FILE = TableViewCellStyleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Sparrow.TableViewCellStyleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TableViewCellStyle.app/TableViewCellStyle";
+			};
+			name = Release;
+		};
+		04CB10E8241F011D00D02442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C47945888A5F1A1101382255 /* Pods-TableViewCellStyle-TableViewCellStyleUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNAVR823XV;
+				INFOPLIST_FILE = TableViewCellStyleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Sparrow.TableViewCellStyleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TableViewCellStyle;
+			};
+			name = Debug;
+		};
+		04CB10E9241F011D00D02442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E22C5089E48ED9577CF57EEA /* Pods-TableViewCellStyle-TableViewCellStyleUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NNAVR823XV;
+				INFOPLIST_FILE = TableViewCellStyleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Sparrow.TableViewCellStyleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TableViewCellStyle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04CB10AD241F011C00D02442 /* Build configuration list for PBXProject "TableViewCellStyle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CB10DF241F011D00D02442 /* Debug */,
+				04CB10E0241F011D00D02442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CB10E1241F011D00D02442 /* Build configuration list for PBXNativeTarget "TableViewCellStyle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CB10E2241F011D00D02442 /* Debug */,
+				04CB10E3241F011D00D02442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CB10E4241F011D00D02442 /* Build configuration list for PBXNativeTarget "TableViewCellStyleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CB10E5241F011D00D02442 /* Debug */,
+				04CB10E6241F011D00D02442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CB10E7241F011D00D02442 /* Build configuration list for PBXNativeTarget "TableViewCellStyleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CB10E8241F011D00D02442 /* Debug */,
+				04CB10E9241F011D00D02442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04CB10AA241F011C00D02442 /* Project object */;
+}
