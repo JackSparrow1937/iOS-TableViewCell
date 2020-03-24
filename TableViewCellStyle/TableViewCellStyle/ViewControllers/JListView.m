@@ -178,7 +178,6 @@
     if(self.sectionStyle.count >= section){
         if([self.sectionStyle[section] valueForKey:@"color"] != nil && [[self.sectionStyle[section] valueForKey:@"color"] isKindOfClass:[UIColor class]]){
             UIView *shadowView = [[UIView alloc]init];
-            shadowView.backgroundColor = [UIColor redColor];
             shadowView.frame = CGRectMake(start.x, start.y, end.x - start.x, end.y - start.y);
             [self.scrollView addSubview:shadowView];
             [self.scrollView sendSubviewToBack:shadowView];
