@@ -50,7 +50,7 @@
 /**
  * 点击事件
  */
-- (void)JListViewDelected:(UIView *)cell indexPath:(NSIndexPath *)indexPath;
+- (void)JListViewdidSelectRowCell:(UIView *)cell indexPath:(NSIndexPath *)indexPath;
 
 @required  //必须实现方法
 /**

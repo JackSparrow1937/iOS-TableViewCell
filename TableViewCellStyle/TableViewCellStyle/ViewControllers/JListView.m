@@ -168,7 +168,7 @@
 
 - (void)cellSelected:(JListTap *)sender{
     if([self.delegate respondsToSelector:@selector(JListViewDelected:indexPath:)]){
-        [self.delegate JListViewDelected:sender.targetView indexPath:sender.indexPath];
+        [self.delegate JListViewdidSelectRowCell:sender.targetView indexPath:sender.indexPath];
     }
 }
 
