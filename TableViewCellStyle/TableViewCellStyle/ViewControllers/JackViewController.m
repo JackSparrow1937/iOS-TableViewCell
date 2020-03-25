@@ -43,7 +43,11 @@
     for (int i = 0; i < 5; i++) {
         NSMutableArray *items = [[NSMutableArray alloc]init];
         for (int j = 0; j < [itemCounts[i] intValue]; j++) {
-            [items addObject:@{@"title":[NSString stringWithFormat:@"显示标题:%d",j],@"contentTitle":[NSString stringWithFormat:@"显示内容:%d",j]}];
+            if(j == 0){
+                [items addObject:@{@"title":[NSString stringWithFormat:@"显示标题:%d",j],@"contentTitle":@"和风花雪月浪漫,痴情人多半贪恋,爱恨情仇都好看,又让你痛不欲生,又让你趁醉装疯,终有天脱胎换骨,直到哭着笑才懂,欲问青天这人生有几何,怕这去日苦多,往事讨一杯相思喝,倘若这回还像曾经执着,心执念你一个,那我可能是多情了,浊酒一杯余生不悲不喜,何惧爱恨别离,一路纵马去斟酌,一曲相思入江水与山河,在油伞下走过,悠然入梦却恍若昨,这人间袅袅炊烟,和风花雪月浪漫,痴情人多半贪恋,爱恨情仇都好看,又让你痛不欲生,又让你趁醉装疯,终有天脱胎换骨,直到哭着笑才懂,欲问青天这人生有几何,怕这去日苦多,往事讨一杯相思喝,倘若这回还像曾经执着,心执念你一个,那我可能是多情了,浊酒一杯余生不悲不喜,何惧爱恨别离,一路纵马去斟酌,一曲相思入江水与山河,在油伞下走过,悠然入梦却恍若昨"}];
+            }else{
+                [items addObject:@{@"title":[NSString stringWithFormat:@"显示标题:%d",j],@"contentTitle":[NSString stringWithFormat:@"显示内容:%d",j]}];
+            }
         }
         NSArray *array = [NSArray arrayWithArray:items];
         [self.dataSource addObject:array];
@@ -137,31 +141,27 @@
 - (UIView *)JListViewForCell:(NSIndexPath *)indexPath{
     UIView *cellView = [[UIView alloc]init];
     cellView.backgroundColor = [UIColor whiteColor];
-    
+    cellView.frame = CGRectMake(16, 0, self.view.frame.size.width - 32, 0);
     UILabel *titleLabel = [[UILabel alloc]init];
     UILabel *contentLabel = [[UILabel alloc]init];
     
     titleLabel.font = [UIFont systemFontOfSize:16];
+    titleLabel.frame = CGRectMake(16, 20, 100, 20);
     titleLabel.textColor = RGBCOLOR(3, 7, 25);
+    titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     titleLabel.text = [self.dataSource[indexPath.section][indexPath.row] valueForKey:@"title"];
+    
     
     contentLabel.font = [UIFont systemFontOfSize:16];
     contentLabel.textColor = RGBCOLOR(135, 139, 153);
     contentLabel.textAlignment = NSTextAlignmentRight;
     contentLabel.text = [self.dataSource[indexPath.section][indexPath.row] valueForKey:@"contentTitle"];
+    contentLabel.numberOfLines = 0;
+    contentLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    contentLabel.frame = CGRectMake(CGRectGetMaxX(titleLabel.frame), 20, cellView.frame.size.width - CGRectGetMaxX(titleLabel.frame) - 10, 20);
     
     [cellView addSubview:titleLabel];
     [cellView addSubview:contentLabel];
-    
-    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(cellView.mas_left).offset(16);
-        make.centerY.equalTo(cellView.mas_centerY);
-    }];
-    [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(titleLabel.mas_right).offset(16);
-        make.right.equalTo(cellView.mas_right).offset(-16);
-        make.centerY.equalTo(cellView.mas_centerY);
-    }];
     
     return cellView;
 }

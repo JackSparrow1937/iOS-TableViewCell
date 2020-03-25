@@ -46,11 +46,11 @@
     self.contentSizeHeight = 0;
     [self getNumsOfCellAndSection];//获取全部cell
     [self getHeadView];//获取头部标题
-    [self getCellView];//获取cell
     [self getShaowAndRadius];//获取分区样式
     
     //cellview用约束布局时,延迟0.1秒.获取frame
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self getCellView];//获取cell, 需要根据内容适配cell.
         [self foundUI];
     });
 }
@@ -111,9 +111,9 @@
             NSDictionary *cellDict = (NSDictionary *)self.cellViews[section][j];
             UIView *cellView = [cellDict valueForKey:@"view"];
             CGFloat cellHeight = [[cellDict valueForKey:@"height"] floatValue];
+            cellView.frame = CGRectMake(CGRectGetMinX(cellView.frame), YShat, CGRectGetWidth(cellView.frame), cellHeight);
             
             if(raduis != 0){
-                cellView.frame = CGRectMake(16, YShat, self.scrollView.frame.size.width - 32, cellHeight);
                 UIRectCorner cornerRadius = 100;
                 CGFloat viewRadius = 0;
                 if(j == 0){//设置第一个cell的圆角
@@ -135,11 +135,11 @@
                 shapeLayer.path = path.CGPath;
                 cellView.layer.mask = shapeLayer;
             }else{
-                cellView.frame = CGRectMake(0, YShat, self.scrollView.frame.size.width, cellHeight);
+                
             }
             
             [self.scrollView addSubview:cellView];
-            YShat = YShat + cellHeight;
+            YShat = YShat + cellView.frame.size.height;
             //记录阴影位置
             shadowStartPoint = CGPointMake(cellView.frame.origin.x, shadowStartPoint.y);
             shadowEndPoint = CGPointMake(CGRectGetMaxX(cellView.frame), YShat);
@@ -151,14 +151,8 @@
                 [cellView addSubview:lineLabel];
                 [cellView bringSubviewToFront:lineLabel];
             }
-            
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:j inSection:section];
             //添加点击事件
-            JListTap *tap = [[JListTap alloc]init];
-            tap.indexPath = indexPath;
-            tap.targetView = cellView;
-            [tap addTarget:self action:@selector(cellSelected:)];
-            [cellView addGestureRecognizer:tap];
+            [self addTapToViewAtRow:j section:section targetView:cellView];
         }
         
         //添加分区的阴影
@@ -166,6 +160,18 @@
     }
 }
 
+//添加点击事件
+- (void)addTapToViewAtRow:(NSInteger)row section:(NSInteger)section targetView:(UIView *)taghetView{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+    //添加点击事件
+    JListTap *tap = [[JListTap alloc]init];
+    tap.indexPath = indexPath;
+    tap.targetView = taghetView;
+    [tap addTarget:self action:@selector(cellSelected:)];
+    [taghetView addGestureRecognizer:tap];
+}
+
+#pragma mark -- 添加点击手势
 - (void)cellSelected:(JListTap *)sender{
     if([self.delegate respondsToSelector:@selector(JListViewdidSelectRowCell:indexPath:)]){
         [self.delegate JListViewdidSelectRowCell:sender.targetView indexPath:sender.indexPath];
@@ -271,15 +277,60 @@
             if (cellHeight <= 0) {
                 cellHeight = 20;
             }
-            self.contentSizeHeight = self.contentSizeHeight + cellHeight;
             if (cellView == nil) {
                 [self.delegate JListViewLoadError:[NSString stringWithFormat:@"cellView为空,row:%ld  section:%ld",(long)row,(long)section]];
             }
-            NSDictionary *cellItem =  @{@"view":cellView,@"height":@(cellHeight),@"indexPath":indexPath};
+            NSDictionary *cellItem;
+            if(self.autoAdaptation){//根据文字内容适配cell高度
+                CGFloat cellAutoHeight = [self getTextHeight:cellView defaultHeight:cellHeight];
+                self.contentSizeHeight = self.contentSizeHeight + cellAutoHeight;
+                cellItem = @{@"view":cellView,@"height":@(cellAutoHeight),@"indexPath":indexPath};
+            }else{
+                self.contentSizeHeight = self.contentSizeHeight + cellHeight;
+                cellItem = @{@"view":cellView,@"height":@(cellHeight),@"indexPath":indexPath};
+            }
             [cellArray addObject:cellItem];
         }
         [self.cellViews addObject:cellArray];
     }
+}
+
+#pragma mark -- 根据文字获取高度. 遍历所有子label, 超过默认高度,给定新高度. 否则给定默认高度.
+- (CGFloat)getTextHeight:(UIView *)cellView defaultHeight:(CGFloat)defaultHeight{
+    CGFloat height = defaultHeight;
+    for (UIView *subView in cellView.subviews) {
+        if([subView isKindOfClass:[UILabel class]]){
+            UILabel *label = (UILabel *)subView;
+            CGFloat lineSpace = 5;
+            NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+            paragraphStyle.lineSpacing = lineSpace;
+            paragraphStyle.alignment = label.textAlignment;
+            NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+            [attributes setObject:paragraphStyle forKey:NSParagraphStyleAttributeName];
+            label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:attributes];
+            
+            //文字高度
+            CGFloat labelHeight = [self getString:label.text lineSpacing:lineSpace font:label.font width:label.frame.size.width];
+            
+            //原label高度
+            CGFloat oldLabelHeight = label.frame.size.height;
+            
+            if(oldLabelHeight < labelHeight){//重新给定根据文字适配的控件高度
+                height = labelHeight + defaultHeight - oldLabelHeight;
+                label.frame = CGRectMake(CGRectGetMinX(label.frame), CGRectGetMinY(label.frame), CGRectGetWidth(label.frame), labelHeight);
+            }
+        }
+    }
+    return height;
+}
+
+//获取文字高度
+- (CGFloat)getString:(NSString *)string lineSpacing:(CGFloat)lineSpacing font:(UIFont*)font width:(CGFloat)width {
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineSpacing = lineSpacing;
+    NSDictionary *dic = @{ NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle };
+    CGSize size = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options: NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil].size;
+    return  ceilf(size.height);
 }
 
 #pragma mark -- 获取shaow集合

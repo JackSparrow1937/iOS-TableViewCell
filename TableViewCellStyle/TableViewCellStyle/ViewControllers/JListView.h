@@ -59,7 +59,7 @@
 - (NSInteger)JListViewNumberOfCellForSection:(NSInteger)section;
 
 /**
- * 返回cell
+ * 返回cell. PS:子控件为label时,label的宽高会根据autoAdaptation变化;autoAdaptation为YES,高度会根据文字适配.
  */
 - (UIView *)JListViewForCell:(NSIndexPath *)indexPath;
 
